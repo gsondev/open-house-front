@@ -1,7 +1,7 @@
 <div>
   <h2>Eficiencia economica</h2>
   <select (change)="filtrarPorAnio($event)">
-    <option>Selecciona un año</option>
+    <option value="">Selecciona un año</option>
     <option *ngFor="let anio of anios" value="{{anio}}">{{anio}}</option>
   </select>
   <table>

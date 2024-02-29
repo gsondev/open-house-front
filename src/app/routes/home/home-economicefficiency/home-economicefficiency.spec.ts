@@ -36,7 +36,7 @@ describe('[L2] - HomeEconomicefficiencyComponent', () => {
     });
 
     it('[L2] - debe mostrar todos los datos cuando no se selecciona un año', () => {
-        component.filtrarPorAnio({target: {value: '2023'}} as unknown as Event);
+        component.filtrarPorAnio({target: {value: ''}} as unknown as Event);
         expect(component.aniosFiltrados.length).toBe(component.datosEficiencia.length);
     });
 
