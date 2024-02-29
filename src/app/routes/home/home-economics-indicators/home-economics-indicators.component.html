@@ -1,11 +1,14 @@
-<div class="indicators-container">
-  <mat-card class="indicator-card" *ngFor="let indicator of economicIndicators">
-    <mat-card-header>
-      <mat-card-title>{{indicator.name}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{indicator.value}}</p>
-      <p>{{indicator.description}}</p>
-    </mat-card-content>
-  </mat-card>
+<div class="indicator-wrapper">
+  <h1>Indicadores económicos</h1>
+  <div class="indicators-container">
+    <mat-card class="indicator-card" *ngFor="let indicator of economicIndicators">
+      <mat-card-header>
+        <mat-card-title>{{indicator.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{indicator.value}}</p>
+        <p>{{indicator.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

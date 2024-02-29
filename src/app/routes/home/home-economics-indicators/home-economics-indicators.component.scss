@@ -1,0 +1,16 @@
+.indicators-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+}
+.indicator-card {
+  min-width: 150px;
+  text-align: center;
+
+  mat-card-header {
+    display: flex;
+    justify-content: center;
+  }
+}
