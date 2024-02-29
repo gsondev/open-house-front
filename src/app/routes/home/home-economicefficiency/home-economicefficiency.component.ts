@@ -56,7 +56,9 @@ export class HomeEconomicefficiencyComponent implements OnInit {
       // }
 
       if (!this.anios.includes(anioSeleccionado)){
-        this.aniosFiltrados = this.datosEficiencia;
+        this.aniosFiltrados = [
+          { anio: 2024, eficiencia: '20%'}
+        ];
       } else {
         this.aniosFiltrados = this.datosEficiencia.filter(dato => dato.anio === anioSeleccionado);
       }
