@@ -94,7 +94,7 @@ describe('[L2] - HomeEconomicsIndicatorsComponent', () => {
 
     it('[L2] - debe manejar correctamente un arreglo vacio de indicadores', () => {
         component.economicIndicators = [];
-        expect(component.economicIndicators.length).toEqual(5);
+        expect(component.economicIndicators.length).toEqual(0);
     });
 
     it('[L2] - debe actualizar la vista correctamente cuando los datos de economicIndicators cambian despues de la inicializacion', () => {
