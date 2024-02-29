@@ -11,6 +11,11 @@ interface EficienciaEconomica {
 })
 export class HomeEconomicefficiencyComponent implements OnInit {
   datosEficiencia: EficienciaEconomica[] = [
+    { anio: 2020, eficiencia: '80%' },
+    { anio: 2021, eficiencia: '85%' },
+    { anio: 2022, eficiencia: '90%' },
+    { anio: 2023, eficiencia: '95%' },
+    { anio: 2024, eficiencia: '20%' }
   ];
   aniosFiltrados: EficienciaEconomica[] = [];
   anios: number[] = [];
@@ -18,7 +23,8 @@ export class HomeEconomicefficiencyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
- 
+    this.anios = this.datosEficiencia.map(dato => dato.anio);
+    this.aniosFiltrados = this.datosEficiencia;
   }
 
   filtrarPorAnio(event: Event) {
