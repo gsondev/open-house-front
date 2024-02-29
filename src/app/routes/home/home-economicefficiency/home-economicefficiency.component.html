@@ -1,8 +1,6 @@
 <div>
   <select (change)="filtrarPorAnio($event)">
     <option>Selecciona un año</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
+    <option *ngFor="let anio of anios" value="anio">{{anio}}</option>
   </select>
 </div>
