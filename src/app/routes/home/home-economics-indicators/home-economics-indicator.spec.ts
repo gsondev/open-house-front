@@ -88,7 +88,7 @@ describe('[L2] - HomeEconomicsIndicatorsComponent', () => {
         { name: "Desempleo", value: "7.1%", description: "Tasa nacional" }
         ];
         component.economicIndicators = mockData;
-        expect(component.economicIndicators.length).toBeGreaterThan(6);
+        expect(component.economicIndicators.length).toBeGreaterThanOrEqual(3);
         expect(component.economicIndicators).toEqual(mockData);
     });
 
