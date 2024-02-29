@@ -34,7 +34,7 @@ export class HomeEconomicefficiencyComponent implements OnInit {
 
     console.log('valorSeleccionado', valorSeleccionado);
   
-    if (valorSeleccionado === '') {
+    if (valorSeleccionado === '' || Number.isNaN(parseInt(valorSeleccionado))) {
       // Caso 1: No mostrar todos los datos cuando no se selecciona un año
       this.aniosFiltrados = this.datosEficiencia;
       console.log('this.aniosFiltrados', this.aniosFiltrados);
@@ -55,7 +55,12 @@ export class HomeEconomicefficiencyComponent implements OnInit {
       //   this.aniosFiltrados = [{ anio: 9999, eficiencia: 'incorrecta' }]; // Mantener un estado incorrecto
       // }
 
-      this.aniosFiltrados = this.datosEficiencia.filter(dato => dato.anio === anioSeleccionado);
+      if (!this.anios.includes(anioSeleccionado)){
+        this.aniosFiltrados = this.datosEficiencia;
+      } else {
+        this.aniosFiltrados = this.datosEficiencia.filter(dato => dato.anio === anioSeleccionado);
+      }
+
 
     }
   }
