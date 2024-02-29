@@ -1,6 +1,19 @@
 <div>
   <select (change)="filtrarPorAnio($event)">
     <option>Selecciona un año</option>
-    <option *ngFor="let anio of anios" value="anio">{{anio}}</option>
+    <option *ngFor="let anio of anios" value="{{anio}}">{{anio}}</option>
   </select>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of displayedColumns">{{column}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let economicefficiency of aniosFiltrados">
+        <td>{{economicefficiency.anio}}</td>
+        <td>{{economicefficiency.eficiencia}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

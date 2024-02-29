@@ -20,6 +20,8 @@ export class HomeEconomicefficiencyComponent implements OnInit {
   aniosFiltrados: EficienciaEconomica[] = [];
   anios: number[] = [];
 
+  displayedColumns: string[] = ['anio', 'eficiencia'];
+
   constructor() { }
 
   ngOnInit() {
@@ -31,7 +33,7 @@ export class HomeEconomicefficiencyComponent implements OnInit {
     // this.aniosFiltrados = [{ anio: 9999, eficiencia: 'incorrecta' }];
 
     const valorSeleccionado = (event.target as HTMLInputElement).value;
-  
+
     if (valorSeleccionado === '' || Number.isNaN(parseInt(valorSeleccionado))) {
       // Caso 1: No mostrar todos los datos cuando no se selecciona un año
       this.aniosFiltrados = this.datosEficiencia;
